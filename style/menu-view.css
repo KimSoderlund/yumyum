@@ -63,10 +63,20 @@
     cursor: pointer;
 }
 
+/* Background Colors*/
 .active {
     background-color: var(--dark-gray-color);
 }
 
+.inactive {
+    background-color: var(--medium-gray-color);
+}
+
+.inactive-small {
+    background-color: var(--medium-gray-color);
+}
+
+/* Font sizes*/
 .bigger-text {
     font-size: 35px;
 }

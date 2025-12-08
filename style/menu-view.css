@@ -9,7 +9,7 @@
 
 .menu-item {
     cursor: pointer;
-    background-color: var(--light-gray-color);
+    background-color: var(--medium-gray-color);
     padding: 1rem;
 }
 .menu-bottom-item {

@@ -1,8 +1,6 @@
 .menu-view {
     flex-direction: column;
     height: 100vh;
-    background-color: var(--green-color);
-    color: var(--white-color);
     padding: 4rem 0.5rem;
 }
 

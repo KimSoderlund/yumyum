@@ -11,4 +11,14 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     box-sizing: border-box;
-}   
+}
+
+/* Backgrounds */
+.menu-colors {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+.cart-colors {
+    background-color: var(--white-color);
+    color: var(--dark-gray-color);
+}

@@ -1,0 +1,14 @@
+.cart-container {
+    margin-left: auto;
+
+    i {
+        background-color: var(--white-color);
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .fa-shopping-cart {
+        color: var(--light-gray-color);
+        font-size: 40px;
+    }
+}

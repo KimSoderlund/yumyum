@@ -1,0 +1,13 @@
+:root {
+    --green-color: #489078;
+    --dark-gray-color: #353131;
+    --light-gray-color: #605858;
+    --white-color: 	 #FFFFFF;
+    --red-color:     #EB5757;
+}
+
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}   

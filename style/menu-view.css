@@ -1,7 +1,7 @@
 .menu-view {
     flex-direction: column;
-    background-color: var(--green-color);
     height: 100vh;
+    background-color: var(--green-color);
     color: var(--white-color);
     padding: 0.5rem;
 }
@@ -74,6 +74,14 @@
 
 .inactive-small {
     background-color: var(--medium-gray-color);
+}
+
+.background-green {
+    background-color: var(--green-color);
+}
+
+.background-lightgray {
+    background-color: var(--light-gray-color);
 }
 
 /* Font sizes*/

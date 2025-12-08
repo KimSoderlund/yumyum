@@ -29,11 +29,31 @@
     grid-template-columns: auto 1fr auto;
 }
 
+
+/* dip & drink section */
+.menu-dip {
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.submenu-item-container {}
+
+.submenu-item {
+    display: inline-block;
+    background-color: var(--light-gray-color);
+    padding: 0.5rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+    border-radius: 5px;
+}
+
+
 .dot-seperator {
     margin:0 0.5rem;
     border-bottom: 2px dotted var(--white-color);
 }
 
+
+/* General classes */
 .bigger-text {
     font-size: 35px;
 }

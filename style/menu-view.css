@@ -1,5 +1,4 @@
 .menu-view {
-    display: flex;
     flex-direction: column;
     background-color: var(--green-color);
     height: 100vh;
@@ -8,7 +7,6 @@
 }
 
 .menu-item {
-    cursor: pointer;
     background-color: var(--medium-gray-color);
     padding: 1rem;
 }
@@ -25,7 +23,7 @@
 }
 
 .menu-item-name-container {
-    display:grid;
+    display: grid;
     grid-template-columns: auto 1fr auto;
 }
 
@@ -54,6 +52,21 @@
 
 
 /* General classes */
+.visible {
+    display: flex;
+}
+.invisible {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--dark-gray-color);
+}
+
 .bigger-text {
     font-size: 35px;
 }

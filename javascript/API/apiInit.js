@@ -1,7 +1,6 @@
 const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 export let apiKey = null;
 export let tenant = null;
-let menuList = null;
 
 
 
@@ -36,7 +35,7 @@ async function getApiKey() {
     await getApiKey();
     await getTenant();
 
-    async function getMenu(){
+    export async function getMenu(){
         const menuUrl = url+'menu'
         const settings = {
             'method': 'GET',
@@ -46,7 +45,6 @@ async function getApiKey() {
         }
         const response = await fetch(menuUrl, settings);
         const data = await response.json();
-        menuList = data;
+        return data;
+        
     }
-
-    await getMenu();

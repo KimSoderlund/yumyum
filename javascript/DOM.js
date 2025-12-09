@@ -44,6 +44,11 @@ export async function renderMenu() {
     });
 
     
+    //Dipsåser
+
+    const sausePrice = document.getElementById("drink-price")
+    sausePrice.innerText =`${dipList[0].price} SEK`;
+
     dipList.forEach((item, index) => {
             const p = document.createElement("p");
             p.classList.add("submenu-item", "tiny-text", "clickable");
@@ -52,6 +57,8 @@ export async function renderMenu() {
     
             dipContainer.appendChild(p);
         });
+
+    
 }
 
 

@@ -17,5 +17,4 @@ cartBtn.addEventListener('click', ()  => {
         backgroundSelector.classList.replace('cart-colors','menu-colors')
 
     } else {console.log("Inget korrekt utfall")}
-
 });

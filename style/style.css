@@ -13,12 +13,66 @@
     box-sizing: border-box;
 }
 
+
+/*General Classes*/
+.dot-seperator {
+    margin:0 0.5rem;
+    border-bottom: 2px dotted var(--white-color);
+}
+
 /* Backgrounds */
 .menu-colors {
     background-color: var(--green-color);
     color: var(--white-color);
 }
+
 .cart-colors {
     background-color: var(--white-color);
     color: var(--dark-gray-color);
+}
+
+/* Visibility */
+.visible {
+    display: flex;
+}
+
+.invisible {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Background Colors*/
+.active {
+    background-color: var(--dark-gray-color);
+}
+
+.inactive {
+    background-color: var(--medium-gray-color);
+}
+
+.inactive-small {
+    background-color: var(--medium-gray-color);
+}
+
+.background-green {
+    background-color: var(--green-color);
+}
+
+.background-lightgray {
+    background-color: var(--light-gray-color);
+}
+
+/* Font sizes*/
+.bigger-text {
+    font-size: 35px;
+}
+.big-text {
+    font-size: 25px;
+}
+.tiny-text{
+    font-size: 12px;
+    font-weight: lighter;
 }

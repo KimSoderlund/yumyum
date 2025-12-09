@@ -1,16 +1,20 @@
 import { getMenu } from './API/apiInit.js';
 
 const wontonContainer = document.getElementById("wonton-container");
+const dipContainer = document.getElementById("dip-container")
 
-export async function renderWontons() {
+export async function renderMenu() {
 
     const menuList = await getMenu();
     const wontonList = menuList.items.filter(item => item.type === 'wonton');
-    console.log(wontonList);
+    const dipList = menuList.items.filter(item => item.type === 'dip');
+    console.log(dipList);
 
     //töm wontoncontainer
     wontonContainer.innerHTML = "";
+    dipContainer.innerHTML = "";
 
+    //Klassaplikator
     wontonList.forEach((item, index) => {
         const ingredientsText = item.ingredients.join(", ");
 
@@ -27,6 +31,7 @@ export async function renderWontons() {
             div.classList.add("menu-bottom-border")
         }
 
+
         div.innerHTML = `
             <div class="menu-item-name-container">
                 <p class="big-text">${item.name}</p>
@@ -38,38 +43,20 @@ export async function renderWontons() {
         wontonContainer.appendChild(div);
     });
 
-
+    
+    dipList.forEach((item, index) => {
+            const p = document.createElement("p");
+            p.classList.add("submenu-item", "tiny-text", "clickable");
+    
+            p.innerText = item.name;
+    
+            dipContainer.appendChild(p);
+        });
 }
 
 
 
-renderWontons();
 
-/*<div id = "wonton-container">
-                <div class = "menu-item menu-top-item menu-bottom-border clickable">
-                    <div class = "menu-item-name-container">
-                        <p class = "big-text">KARLSTAD</p>
-                        <p class = "dot-seperator"></p>
-                        <p class = "big-text">9 SEK</p>
-                    </div>
-                    <p class = "tiny-text">Kantarell, scharlottenlök, etc</p>
-                </div>
 
-                <div class = "menu-item menu-bottom-border active clickable">
-                    <div class = "menu-item-name-container">
-                        <p class = "big-text">KARLSTAD</p>
-                        <p class = "dot-seperator"></p>
-                        <p class = "big-text">9 SEK</p>
-                    </div>
-                    <p class = "tiny-text">Kantarell, scharlottenlök, etc</p>
-                </div>
-
-                <div class = "menu-item menu-bottom-item clickable">
-                    <div class = "menu-item-name-container">
-                        <p class = "big-text">KARLSTAD</p>
-                        <p class = "dot-seperator"></p>
-                        <p class = "big-text">9 SEK</p>
-                    </div>
-                    <p class = "tiny-text">Kantarell, scharlottenlök, etc</p>
-                </div>
-            </div>*/
+// Todo: Flytta den här till en central plats
+renderMenu();

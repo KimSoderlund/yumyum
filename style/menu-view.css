@@ -1,7 +1,11 @@
 .menu-view {
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     padding: 4rem 0.5rem;
+}
+
+#menuView .clickable:hover {
+    background-color: var(--dark-gray-color)
 }
 
 .menu-item {
@@ -31,8 +35,6 @@
     border-radius: 8px;
     margin-top: 0.5rem;
 }
-
-.submenu-item-container {}
 
 .submenu-item {
     display: inline-block;

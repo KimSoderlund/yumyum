@@ -1,18 +1,21 @@
 import { getMenu } from './API/apiInit.js';
 
 const wontonContainer = document.getElementById("wonton-container");
-const dipContainer = document.getElementById("dip-container")
+const dipContainer = document.getElementById("dip-container");
+const drinkContainer = document.getElementById("drink-container");
 
 export async function renderMenu() {
 
     const menuList = await getMenu();
     const wontonList = menuList.items.filter(item => item.type === 'wonton');
     const dipList = menuList.items.filter(item => item.type === 'dip');
-    console.log(dipList);
+    const drinkList = menuList.items.filter(item => item.type === 'drink')
+    console.log(drinkList);
 
-    //töm wontoncontainer
+    //töm menycontainers om det råkar vara något där
     wontonContainer.innerHTML = "";
     dipContainer.innerHTML = "";
+    drinkContainer.innerHTML = "";
 
     //Klassaplikator
     wontonList.forEach((item, index) => {
@@ -42,22 +45,30 @@ export async function renderMenu() {
 
         wontonContainer.appendChild(div);
     });
-
     
     //Dipsåser
-
-    const sausePrice = document.getElementById("drink-price")
+    const sausePrice = document.getElementById("dip-price")
     sausePrice.innerText =`${dipList[0].price} SEK`;
 
-    dipList.forEach((item, index) => {
+    dipList.forEach((item) => {
             const p = document.createElement("p");
             p.classList.add("submenu-item", "tiny-text", "clickable");
-    
             p.innerText = item.name;
-    
             dipContainer.appendChild(p);
         });
+    
+    //Drickor
+    const drinkPrice = document.getElementById("drink-price")
+    drinkPrice.innerText =`${drinkList[0].price} SEK`;
 
+    drinkList.forEach((item) => {
+            const p = document.createElement("p");
+            p.classList.add("submenu-item", "tiny-text", "clickable");
+            p.innerText = item.name;
+            drinkContainer.appendChild(p);
+        });
+
+    
     
 }
 

@@ -22,10 +22,8 @@ export async function renderMenu() {
         const ingredientsText = item.ingredients.join(", ");
 
         const div = document.createElement("div");
-
         //Klasser alla ska ha
         div.classList.add("menu-item", "clickable");
-
         //Klasser för specifika platser
         if (index == 0) {div.classList.add("menu-top-item", "menu-bottom-border")            
         } else if (index == wontonList.length -1) {
@@ -42,7 +40,10 @@ export async function renderMenu() {
                 <p class="big-text">${item.price} SEK</p>
             </div>
             <p class="tiny-text">${ingredientsText}</p>`;
-
+        
+            
+        div.addEventListener("click", () => clickMenuBtn(item));
+        
         wontonContainer.appendChild(div);
     });
     
@@ -54,6 +55,9 @@ export async function renderMenu() {
             const p = document.createElement("p");
             p.classList.add("submenu-item", "tiny-text", "clickable");
             p.innerText = item.name;
+
+            p.addEventListener("click", () => clickMenuBtn(item));
+
             dipContainer.appendChild(p);
         });
     
@@ -65,14 +69,16 @@ export async function renderMenu() {
             const p = document.createElement("p");
             p.classList.add("submenu-item", "tiny-text", "clickable");
             p.innerText = item.name;
-            drinkContainer.appendChild(p);
-        });
 
-    
-    
+            p.addEventListener("click", () => clickMenuBtn(item));
+
+            drinkContainer.appendChild(p);
+        });      
 }
 
-
+export function clickMenuBtn(item) {
+    console.log(item.name, item.id)
+}
 
 
 

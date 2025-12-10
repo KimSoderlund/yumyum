@@ -4,27 +4,28 @@ const wontonContainer = document.getElementById("wonton-container");
 const dipContainer = document.getElementById("dip-container");
 const drinkContainer = document.getElementById("drink-container");
 
+
+// TODO: Snabba på den här sen då allt annat är klart
 export async function renderMenu() {
 
     const menuList = await getMenu();
     const wontonList = menuList.items.filter(item => item.type === 'wonton');
     const dipList = menuList.items.filter(item => item.type === 'dip');
     const drinkList = menuList.items.filter(item => item.type === 'drink')
-    console.log(drinkList);
 
-    //töm menycontainers om det råkar vara något där
+    //Empty menu-containers
     wontonContainer.innerHTML = "";
     dipContainer.innerHTML = "";
     drinkContainer.innerHTML = "";
 
-    //Klassaplikator
+    //Class aplicator
     wontonList.forEach((item, index) => {
         const ingredientsText = item.ingredients.join(", ");
 
         const div = document.createElement("div");
-        //Klasser alla ska ha
+        //General Classes
         div.classList.add("menu-item", "clickable");
-        //Klasser för specifika platser
+        //Specific index classes
         if (index == 0) {div.classList.add("menu-top-item", "menu-bottom-border")            
         } else if (index == wontonList.length -1) {
             div.classList.add("menu-bottom-item")
@@ -47,7 +48,7 @@ export async function renderMenu() {
         wontonContainer.appendChild(div);
     });
     
-    //Dipsåser
+    //Dip sauses
     const sausePrice = document.getElementById("dip-price")
     sausePrice.innerText =`${dipList[0].price} SEK`;
 
@@ -61,7 +62,7 @@ export async function renderMenu() {
             dipContainer.appendChild(p);
         });
     
-    //Drickor
+    //drinks
     const drinkPrice = document.getElementById("drink-price")
     drinkPrice.innerText =`${drinkList[0].price} SEK`;
 
@@ -76,8 +77,29 @@ export async function renderMenu() {
         });      
 }
 
+
+//TODO: Flytta den här bort härifrån. Orelevant i DOM
+//CART
+
+//Initiate cart list and add items to cartList on click.
+let cartList = [];
 export function clickMenuBtn(item) {
-    console.log(item.name, item.id)
+    //See if item exists, if it does increase quantity
+    const exists = cartList.find(cartItem => cartItem.id === item.id);
+    if (exists) {
+        exists.quantity ++;
+    } else {
+        //TODO: Kontrollera att detta är all information jag behöver då jag skickar order till API
+        const newCartItem = {
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: 1
+        };
+        cartList.push(newCartItem);
+    }
+
+    console.log(cartList);
 }
 
 

@@ -3,6 +3,7 @@ import { renderCart } from "./renderCart.js";
 //Buttons
 const cartBtn = document.getElementById('cartBtn');
 const orderBtn = document.getElementById('placeOrderBtn');
+const newOrderBtn = document.getElementById('newOrderBtn')
 
 //Views and other elements
 const menuView = document.getElementById('menuView');
@@ -40,4 +41,12 @@ orderBtn.addEventListener('click', () => {
     cartContainer.classList.replace('visible','invisible');
     orderView.classList.replace('invisible', 'visible');
     backgroundSelector.classList.replace('cart-colors','order-colors')
+})
+newOrderBtn.addEventListener('click',() => {
+    orderView.classList.replace('visible', 'invisible');
+
+    cartContainer.classList.replace('invisible','visible');
+    cartCounter.classList.replace('invisible', 'visible');
+    menuView.classList.replace('invisible','visible');
+    backgroundSelector.classList.replace('order-colors','menu-colors')
 })

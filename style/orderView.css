@@ -3,7 +3,6 @@
     align-items: center;
     gap: 1rem;
 }
-
 #orderView p {
     text-align: center;
 }
@@ -13,7 +12,7 @@
     max-width: 30vw;
 }
 
-.reciept-btn {
+#recieptBtn {
     margin-top: 1rem;
     width: 100%;
     max-width: 360px;
@@ -22,12 +21,12 @@
     border:2px solid var(--lightest-gray-color);
     border-radius: 5px;
 }
-.reciept-btn:hover {
+#recieptBtn:hover {
     color:var(--white-color);
     border:2px solid var(--white-color);
 }
 
-.new-order-btn {
+#newOrderBtn {
     width: 100%;
     max-width: 360px;
     padding: 1rem;
@@ -35,6 +34,6 @@
     color:var(--lightest-gray-color);
     border-radius: 5px;
 }
-.new-order-btn:hover {
+#newOrderBtn:hover {
     color: var(--white-color);
 }

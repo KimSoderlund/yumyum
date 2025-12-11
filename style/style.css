@@ -3,8 +3,10 @@
     --dark-gray-color: #353131;
     --medium-gray-color: #605858;
     --light-gray-color: #837C7C;
+    --lightest-gray-color: #C2C1C1;
     --white-color: 	 #EBEAE7;
     --red-color:     #EB5757;
+    --black-color: black;
 }
 
 * {
@@ -71,6 +73,9 @@
 }
 .big-text {
     font-size: 25px;
+}
+.medium-text {
+    font-size: 20px;
 }
 .tiny-text{
     font-size: 12px;

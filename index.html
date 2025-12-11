@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/cart.css">
-    <link rel="stylesheet" href="style/menu-view.css">
+    <link rel="stylesheet" href="style/menuView.css">
+    <link rel="stylesheet" href="style/cartView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="./javascript/script.js"></script>
     <title>Yum yum gim mi sum</title>
@@ -41,11 +42,28 @@
             </div>
         </section>
 
-        <section class = "menu-view invisible" id ="cartView">
-            <h1>Cart placeholder</h1>
 
+
+        <section class = "menu-view invisible" id ="cartView">
+            <div class = "cart-bottom-border">
+                <div class = "cart-item, menu-item-name-container">
+                    <p class = "big-text">Karlstad</p>
+                    <div class ="cart-dot-seperator"></div>
+                    <p class = "big-text">19 SEK</p>
+                </div>
+                <div class = "cart-quantity-controller">
+                    <p class = "cart-button bigger-text clickable" id ="cartRemoveItemBtn">-</p>
+                    <p class = "medium-text">X stycken</p>
+                    <p class = "cart-button bigger-text clickable" id ="cartAddItemBtn">+</p>
+                </div>
+            </div>
         </section>
 
     </main>
 </body>
 </html>
+
+
+<!-- TODO: FIXA Bottom-padding på tex så att dot-seperator hamnar i nivå med texten -->
+<!-- TODO: FIXA en loading view då appen startar så att kund har något vackert att titta på innan den laddar -->
+<!-- TODO: Fixa så - tecknet i cart faktiskt hamnar i centrum -->

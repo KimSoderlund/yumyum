@@ -2,10 +2,6 @@ const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 export let apiKey = null;
 export let tenant = null;
 
-
-
-
-
 async function getApiKey() {
     try {
         const settings = {method: 'POST'};

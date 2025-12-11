@@ -45,33 +45,21 @@
 
 
         <section class = "menu-view invisible" id ="cartView">
-            <div class = "cart-bottom-border cart-item-container">
-                <div class = "cart-item, menu-item-name-container">
-                    <p class = "big-text">Karlstad</p>
-                    <div class ="cart-dot-seperator"></div>
-                    <p class = "big-text">19 SEK</p>
-                </div>
-                <div class = "cart-quantity-controller">
-                    <p class = "cart-button bigger-text clickable" id ="cartRemoveItemBtn">-</p>
-                    <p class = "medium-text">X stycken</p>
-                    <p class = "cart-button bigger-text clickable" id ="cartAddItemBtn">+</p>
+
+            <div id="cartItemContainer">
+                <div class = "cart-bottom-border cart-item">
+                    <div class = "cart-item, menu-item-name-container">
+                        <p class = "big-text">Karlstad</p>
+                        <div class ="cart-dot-seperator"></div>
+                        <p class = "big-text">19 SEK</p>
+                    </div>
+                    <div class = "cart-quantity-controller">
+                        <p class = "cart-button bigger-text clickable" id ="cartRemoveItemBtn">-</p>
+                        <p class = "medium-text" id = "itemAmount">X stycken</p>
+                        <p class = "cart-button bigger-text clickable" id ="cartAddItemBtn">+</p>
+                    </div>
                 </div>
             </div>
-            
- <div class = "cart-item-container">
-                <div class = "cart-item, menu-item-name-container">
-                    <p class = "big-text">Karlstad</p>
-                    <div class ="cart-dot-seperator"></div>
-                    <p class = "big-text">19 SEK</p>
-                </div>
-                <div class = "cart-quantity-controller">
-                    <p class = "cart-button bigger-text clickable" id ="cartRemoveItemBtn">-</p>
-                    <p class = "medium-text">X stycken</p>
-                    <p class = "cart-button bigger-text clickable" id ="cartAddItemBtn">+</p>
-                </div>
-            </div>
-
-
             <div class = "total-price-container" id = "totalPrice">
                 <div>
                     <p class = "big-text">TOTALT</p>
@@ -85,6 +73,16 @@
             <div>
                 <p class = "big-text clickable" id = "placeOrderBtn">TAKE MY MONEY!</p>
             </div>
+        </section>
+
+        <section class = "menu-view invisible" id="orderView">
+            <img src = ./images/foodbox.png>
+            <p>DINA WONTONS</p> 
+            <p>TILLAGAS!</p>
+            <p>ETA X MIN</p>
+            <p>orderID</p>
+            <p>SE KVITTO</p>
+            <p>GÖR EN NY BESTÄLLNING</p>           
         </section>
 
     </main>

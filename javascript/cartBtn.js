@@ -1,7 +1,14 @@
+import { renderCart } from "./renderCart.js";
+
+//Buttons
 const cartBtn = document.getElementById('cartBtn');
+const orderBtn = document.getElementById(placeOrderBtn);
+
+//Views and other elements
 const menuView = document.getElementById('menuView');
 const cartView = document.getElementById('cartView');
-const cartCounter = document.getElementById('cartCounter')
+const orderView = document.getElementById('orderView');
+const cartCounter = document.getElementById('cartCounter');
 const backgroundSelector = document.querySelector('main');
 
 
@@ -12,6 +19,7 @@ cartBtn.addEventListener('click', ()  => {
         cartCounter.classList.replace('visible', 'invisible');
         cartView.classList.replace('invisible', 'visible')         
         backgroundSelector.classList.replace('menu-colors','cart-colors')
+        renderCart();
 
     } else if (cartView.classList.contains('visible')) {
         cartView.classList.replace('visible','invisible');
@@ -21,3 +29,4 @@ cartBtn.addEventListener('click', ()  => {
 
     } else {console.log("Inget korrekt utfall")}
 });
+

@@ -33,6 +33,11 @@
     color: var(--dark-gray-color);
 }
 
+.order-colors {
+    background-color: var(--medium-gray-color);
+    color: var(--white-color);
+}
+
 /* Visibility */
 .visible {
     display: flex;

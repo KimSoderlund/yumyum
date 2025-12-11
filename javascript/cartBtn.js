@@ -39,4 +39,5 @@ orderBtn.addEventListener('click', () => {
     cartView.classList.replace('visible','invisible');
     cartContainer.classList.replace('visible','invisible');
     orderView.classList.replace('invisible', 'visible');
+    backgroundSelector.classList.replace('cart-colors','order-colors')
 })

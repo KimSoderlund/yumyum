@@ -1,1 +1,1 @@
-2025-12-10 - Code Review - 
+2025-12-10 - Code Review - Klass + David - Välstrukturerat. kommetarer på filnamn där jag använt Kebab-case då det brukar vara camel-case. Även att inte använda förkortningar i filnamn även om BTN ofta är en allmänt accepterad förkortning för button.

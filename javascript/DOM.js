@@ -5,7 +5,6 @@ const dipContainer = document.getElementById("dip-container");
 const drinkContainer = document.getElementById("drink-container");
 
 
-// TODO: Snabba på den här sen då allt annat är klart
 export async function renderMenu() {
 
     const menuList = await getMenu();
@@ -43,7 +42,7 @@ export async function renderMenu() {
             <p class="tiny-text">${ingredientsText}</p>`;
         
             
-        div.addEventListener("click", () => clickMenuBtn(item));
+        div.addEventListener("click", () => clickMenuBtn(item), );
         
         wontonContainer.appendChild(div);
     });
@@ -81,7 +80,7 @@ export async function renderMenu() {
 //TODO: Flytta den här bort härifrån. Orelevant i DOM
 //CART
 
-//Initiate cart list and add items to cartList on click.
+//Initiate cart list and add items to cartList and update cart counter on click.
 let cartList = [];
 export function clickMenuBtn(item) {
     //See if item exists, if it does increase quantity
@@ -98,10 +97,18 @@ export function clickMenuBtn(item) {
         };
         cartList.push(newCartItem);
     }
-
+    increaseCartCounter();
     console.log(cartList);
 }
 
+//update cart counter
+
+const cartCounter = document.getElementById("cartCounter");
+
+function increaseCartCounter (cartItems) {
+    let cartSize = cartList.reduce((total, item) => total + item.quantity, 0);
+    cartCounter.innerText = cartSize;
+}
 
 
 // Todo: Flytta den här till en central plats

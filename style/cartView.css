@@ -31,8 +31,20 @@
     margin:0.7rem 0rem;
 }
 
-.cart-bottom-border{
+.cart-bottom-border {
         border-bottom: 1px dotted var(--black-color);
+}
+
+.lower-cart {
+    margin-top: auto;
+}
+.return-button {
+    background-color: var(--lightest-gray-color);
+    width: fit-content;
+    padding:0.25rem;
+    border-radius: 4px;
+    margin:1rem 0;
+    cursor: pointer;
 }
 
 .total-price-container {
@@ -43,7 +55,6 @@
     background-color: var(--lightest-gray-color);
     padding: 1rem;
     border-radius: 5px;
-    margin-top: auto;
 }
 
 #placeOrderBtn {

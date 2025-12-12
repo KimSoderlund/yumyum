@@ -3,7 +3,8 @@ import { renderCart } from "./renderCart.js";
 //Buttons
 const cartBtn = document.getElementById('cartBtn');
 const orderBtn = document.getElementById('placeOrderBtn');
-const newOrderBtn = document.getElementById('newOrderBtn')
+const newOrderBtn = document.getElementById('newOrderBtn');
+const returnBtn = document.getElementById('returnBtn');
 
 //Views and other elements
 const menuView = document.getElementById('menuView');
@@ -22,18 +23,21 @@ cartBtn.addEventListener('click', ()  => {
         cartCounter.classList.replace('visible', 'invisible');
         cartView.classList.replace('invisible', 'visible')         
         backgroundSelector.classList.replace('menu-colors','cart-colors')
-
         renderCart();
-
     } else if (cartView.classList.contains('visible')) {
         cartView.classList.replace('visible','invisible');
         menuView.classList.replace('invisible','visible');
         cartCounter.classList.replace('invisible', 'visible');
         backgroundSelector.classList.replace('cart-colors','menu-colors')
-
     } else {console.log("Inget korrekt utfall")}
 });
 
+returnBtn.addEventListener('click', () => {
+    cartView.classList.replace('visible','invisible');
+    menuView.classList.replace('invisible','visible');
+    cartCounter.classList.replace('invisible', 'visible');
+    backgroundSelector.classList.replace('cart-colors','menu-colors')
+});
 
 //Back & from orderView
 orderBtn.addEventListener('click', () => {
@@ -41,12 +45,12 @@ orderBtn.addEventListener('click', () => {
     cartContainer.classList.replace('visible','invisible');
     orderView.classList.replace('invisible', 'visible');
     backgroundSelector.classList.replace('cart-colors','order-colors')
-})
+});
+
 newOrderBtn.addEventListener('click',() => {
     orderView.classList.replace('visible', 'invisible');
-
     cartContainer.classList.replace('invisible','visible');
     cartCounter.classList.replace('invisible', 'visible');
     menuView.classList.replace('invisible','visible');
     backgroundSelector.classList.replace('order-colors','menu-colors')
-})
+});

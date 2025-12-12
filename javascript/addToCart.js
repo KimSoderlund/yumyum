@@ -1,5 +1,6 @@
 import { increaseCartCounter } from './cartCounter.js';
 
+
 //Initiate cart list and add items to cartList and update cart counter on click.
 let cartList = [];
 

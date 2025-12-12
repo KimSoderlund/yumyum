@@ -1,4 +1,5 @@
 import { renderCart } from "./renderCart.js";
+import {canSend} from "./sendOrderBtn.js";
 
 //Buttons
 const cartBtn = document.getElementById('cartBtn');
@@ -40,7 +41,9 @@ returnBtn.addEventListener('click', () => {
 });
 
 //Back & from orderView
+
 orderBtn.addEventListener('click', () => {
+    if (!canSend) {return};
     cartView.classList.replace('visible','invisible');
     cartContainer.classList.replace('visible','invisible');
     orderView.classList.replace('invisible', 'visible');

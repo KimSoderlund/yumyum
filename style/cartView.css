@@ -41,7 +41,7 @@
 .return-button {
     background-color: var(--lightest-gray-color);
     width: fit-content;
-    padding:0.25rem;
+    padding:0.5rem;
     border-radius: 4px;
     margin:1rem 0;
     cursor: pointer;

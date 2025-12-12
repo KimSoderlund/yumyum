@@ -19,7 +19,7 @@ export function renderCart() {
             <div class="cart-item menu-item-name-container">
                 <p class="big-text">${item.name}</p>
                 <div class="cart-dot-seperator"></div>
-                <p class="big-text">${item.price} SEK</p>
+                <p class="big-text">${item.price*item.quantity} SEK</p>
             </div>
             <div class="cart-quantity-controller">
                 <p class="cart-button bigger-text clickable" id="remove-${index}">-</p>

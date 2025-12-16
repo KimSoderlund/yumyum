@@ -1,5 +1,9 @@
 import { renderCart } from "./renderCart.js";
-import {canSend} from "./sendOrderBtn.js";
+import { canSend } from "./sendOrderBtn.js";
+import { sendOrder } from "./sendOrder.js";
+import { removeOrder } from "./newOrderBtn.js";
+import { orderBtnActivation } from "./sendOrderBtn.js";
+
 
 //Buttons
 const cartBtn = document.getElementById('cartBtn');
@@ -42,12 +46,14 @@ returnBtn.addEventListener('click', () => {
 
 //Back & from orderView
 
-orderBtn.addEventListener('click', () => {
+orderBtn.addEventListener('click', async () => {
     if (!canSend) {return};
     cartView.classList.replace('visible','invisible');
     cartContainer.classList.replace('visible','invisible');
     orderView.classList.replace('invisible', 'visible');
     backgroundSelector.classList.replace('cart-colors','order-colors')
+await sendOrder();
+
 });
 
 newOrderBtn.addEventListener('click',() => {
@@ -56,4 +62,7 @@ newOrderBtn.addEventListener('click',() => {
     cartCounter.classList.replace('invisible', 'visible');
     menuView.classList.replace('invisible','visible');
     backgroundSelector.classList.replace('order-colors','menu-colors')
+    removeOrder();
+    orderBtnActivation();
+
 });

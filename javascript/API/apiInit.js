@@ -1,4 +1,4 @@
-const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
+export const url = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 export let apiKey = null;
 export let tenant = null;
 

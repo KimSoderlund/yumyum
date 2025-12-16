@@ -5,6 +5,5 @@ export function orderBtnActivation() {
 const listCheck = getCartList();
 if (listCheck && listCheck.length > 0) {
     canSend = true;
-    console.log('can send')
-    } else {canSend = false; console.log('cant send')}
+    } else {canSend = false;}
 }

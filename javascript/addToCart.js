@@ -14,7 +14,6 @@ export function clickMenuBtn(item) {
     if (exists) {
         exists.quantity ++;
     } else {
-        //TODO: Kontrollera att detta är all information jag behöver då jag skickar order till API
         const newCartItem = {
             id: item.id,
             name: item.name,
@@ -24,5 +23,4 @@ export function clickMenuBtn(item) {
         cartList.push(newCartItem);
     }
     increaseCartCounter(cartList);
-    console.log(cartList);
 }

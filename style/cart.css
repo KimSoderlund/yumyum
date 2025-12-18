@@ -1,0 +1,30 @@
+.cart-container {
+    margin-left: auto;
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+
+    i {
+        background-color: var(--white-color);
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .fa-shopping-cart {
+        color: var(--light-gray-color);
+        font-size: 40px;
+    }
+}
+
+#cartCounter {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    right:0;
+    transform: translate(50%, -50%);
+    height:1.5rem;
+    width:1.5rem;
+    background-color: var(--red-color);
+    border-radius: 1000px;
+}

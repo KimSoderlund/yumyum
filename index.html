@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUM YUM GIVE ME SUM</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/menuView.css">
+    <link rel="stylesheet" href="style/cartView.css">
+    <link rel="stylesheet" href="style/orderView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="./javascript/script.js"></script>
+    <title>Yum yum gim mi sum</title>
 </head>
 <body>
-    
+    <main class = "menu-colors">
+       
+        <div class = "cart-container visible" id = "cartBtnContainer">  
+            <i class = "fa fa-shopping-cart" id ="cartBtn"></i>
+            <div class = "visible" id="cartCounter">0</div>
+        </div>
+
+        <section class = "menu-view visible" id ="menuView">
+            <h2 class = "bigger-text">MENY</h2>
+            <div id = "wonton-container"></div>
+                            
+            <div class = "menu-item menu-dip">
+                <div class = "menu-item-name-container">
+                    <p class = "big-text">DIPSÅS</p>
+                    <p class = "dot-seperator"></p>
+                    <p class = "big-text" id="dip-price"></p>
+                </div>
+                <div id = "dip-container"></div>
+            </div>
+
+            <div class = "menu-item menu-dip">
+                <div class = "menu-item-name-container">
+                    <p class = "big-text">DRICKA</p>
+                    <p class = "dot-seperator"></p>
+                    <p class = "big-text" id="drink-price"></p>
+                </div>
+                <div id = "drink-container"></div>
+            </div>
+        </section>
+
+
+
+        <section class = "menu-view invisible" id ="cartView">
+
+            <div id="cartItemContainer">
+                <div class = "cart-bottom-border cart-item">
+                    <div class = "cart-item, menu-item-name-container">
+                        <p class = "big-text">Karlstad</p>
+                        <div class ="cart-dot-seperator"></div>
+                        <p class = "big-text">19 SEK</p>
+                    </div>
+                    <div class = "cart-quantity-controller">
+                        <p class = "cart-button bigger-text clickable" id ="cartRemoveItemBtn">-</p>
+                        <p class = "medium-text" id = "itemAmount">X stycken</p>
+                        <p class = "cart-button bigger-text clickable" id ="cartAddItemBtn">+</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "lower-cart">
+                <div class = "return-button clickable" id="returnBtn">Köp mer</div>
+                <div class = "total-price-container" id = "totalPrice">
+                    <div>
+                        <p class = "big-text">TOTALT</p>
+                        <p>inkl 20% moms</p>
+                    </div>
+                    <div>
+                        <p class = "bigger-text" id="totalSum">120 SEK</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p class = "big-text clickable" id = "placeOrderBtn">TAKE MY MONEY!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class = "menu-view invisible" id="orderView">
+            <img src = ./images/foodbox.png>
+            <p class ="bigger-text">DINA WONTONS<br>TILLAGAS</p>
+            <p class = "big-text" id = "orderEta">ETA X MIN</p>
+            <p class = "tiny-text" id = "orderId">orderID</p>
+            <p class = "large-text clickable" id = "recieptBtn">SE KVITTO</p>
+            <p class = "large-text clickable" id ="newOrderBtn">GÖR EN NY BESTÄLLNING</p>           
+        </section>
+
+    </main>
 </body>
 </html>

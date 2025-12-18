@@ -1,0 +1,17 @@
+Foodtruck rapport för Kim Söderlund
+
+Jag har arbetat med kraven för: G 
+
+Den 2024-12-09 granskade jag Andreas kod. 
+Jag gav följande feedback: Konkret så var den väldigt, nästan över strukturerad vad som nog skulle göra mer fackmannamässigt vana ögon mer bekväma att gå igenom koden. Känner att jag inte är kapabel att kritisera något då produkten är en carbon-copy av kundspecifikationen och har många smarta lösningar på problem som jag kommer ta med mig i senare projekt.
+
+Den 2024-12-10 granskade Klassen med lärare min kod. Jag fick som 
+feedback: Välstrukturerad kod och kommetarer på filnamn där jag använt Kebab-case då det brukar vara camel-case. Även att inte använda förkortningar i filnamn även om BTN ofta är en allmänt accepterad förkortning för button.
+
+Den 2024-12-11 testade Annica Ivansson min webbapp. 
+Jag fick följande feedback: Hon sakna att då man trycker på en produkt så vet man att den har lagts i kundkorgen. En tydlig knapp att återgå från kundvagnen då det var lite obskyrt med kundvagnen högst upp. Totalpris på varor av samma sort i kundvagnen istället för en enstaka produktens pris, hon tycker det känns bättre då det är det hon är van och det gör det lättare att se vars det blir dyrt. Man borde kunna ställa in antalet produkter på första sidan och inte endast i kundvagnen. 
+Byta ut texten "Take my money" då det inte var uppenbart att det var där man betalade, och även om namnet på trucken i säg säger att det är lite lekfullt så är inte alla med på memes.
+Min sambo har uppenbarligen inte hört om "two stars and a wish". Mer "two baseball bats and a beating" 
+
+Den 2024-12-xx testade Namn 2 min webbapp. Jag fick följande feedback:
+Ge ett konkret exempel.

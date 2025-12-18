@@ -1,0 +1,45 @@
+.menu-view {
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 4rem 0.9rem;
+}
+
+#menuView .clickable:hover {
+    background-color: var(--dark-gray-color)
+}
+
+.menu-item {
+    background-color: var(--medium-gray-color);
+    padding: 1rem;
+}
+.menu-bottom-item {
+    border-radius: 0 0 8px 8px;
+}
+.menu-top-item {
+    margin-top: 0.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.menu-bottom-border {
+    border-bottom: 1px solid rgb(149, 149, 149);
+}
+
+.menu-item-name-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+
+/* dip & drink section */
+.menu-dip {
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.submenu-item {
+    display: inline-block;
+    background-color: var(--light-gray-color);
+    padding: 0.5rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+    border-radius: 5px;
+}

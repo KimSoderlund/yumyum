@@ -45,7 +45,6 @@ returnBtn.addEventListener('click', () => {
 });
 
 //Back & from orderView
-
 orderBtn.addEventListener('click', async () => {
     if (!canSend) {return};
     cartView.classList.replace('visible','invisible');

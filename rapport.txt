@@ -1,3 +1,6 @@
+Repo: https://github.com/KimSoderlund/yumyum
+Pages: https://kimsoderlund.github.io/yumyum/
+
 Foodtruck rapport för Kim Söderlund
 
 Jag har arbetat med kraven för: G 
@@ -13,5 +16,4 @@ Jag fick följande feedback: Hon sakna att då man trycker på en produkt så ve
 Byta ut texten "Take my money" då det inte var uppenbart att det var där man betalade, och även om namnet på trucken i säg säger att det är lite lekfullt så är inte alla med på memes.
 Min sambo har uppenbarligen inte hört om "two stars and a wish". Mer "two baseball bats and a beating" 
 
-Den 2024-12-xx testade Namn 2 min webbapp. Jag fick följande feedback:
-Ge ett konkret exempel.
+Den 2024-12-19 Valentino testade min app. Han tyckte att den hade följt produktbeskrivningen och den hade god funktionalitet. Han kommenterade att kvitto inte visades.

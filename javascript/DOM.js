@@ -32,8 +32,6 @@ export async function renderMenu() {
         } else {
             div.classList.add("menu-bottom-border")
         }
-
-
         div.innerHTML = `
             <div class="menu-item-name-container">
                 <p class="big-text">${item.name}</p>
